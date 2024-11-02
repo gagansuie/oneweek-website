@@ -2,29 +2,29 @@
 	import IconTool from '$lib/assets/icons/IconTool.svelte'
 </script>
 
-<div class="mx-auto max-w-7xl py-20 font-urban">
+<div class="mx-auto py-20 font-urban">
 	<section class="">
 		<h2
-			class="flex flex-wrap items-center justify-center gap-2 text-center font-urban text-4xl font-semibold leading-normal text-white max-md:flex-col md:text-5xl">
+			class="mx-auto flex w-11/12 flex-wrap items-center justify-center gap-2 text-balance text-center font-urban text-4xl font-semibold leading-normal text-white max-md:flex-col md:text-5xl">
 			Hire More with AI Talent-Matching
 		</h2>
 
-		<p class="mt-4 text-balance text-center text-white/60 md:mt-6 md:text-lg">
+		<p class="mx-auto mt-4 max-w-6xl text-balance text-center text-white/60 md:mt-6 md:text-lg">
 			Looking to build a versatile team for your project? OneWeek offers access to a wide range of
 			professionals, ready to help you succeed. Our AI talent-matching is available for premium
 			users.
 		</p>
 
 		<div
-			class="mx-2 mt-6 grid grid-cols-1 bg-gradient-to-b from-[#00B7CC] to-[#00173A] px-5 py-6 md:mx-auto md:mt-10 md:max-w-3xl md:grid-cols-[3fr_2fr] md:gap-6 md:py-12 lg:max-w-6xl">
-			<div class="h-72 md:h-[22rem] lg:h-[28rem]">
+			class="mx-2 mt-10 grid grid-cols-1 bg-gradient-to-b from-[#00B7CC] to-[#00173A] px-5 py-12 md:mx-auto md:mt-14 md:max-w-3xl md:grid-cols-[3fr_2fr] md:gap-2 md:py-16 lg:w-11/12 lg:max-w-7xl">
+			<div class="h-72 md:h-[16rem] lg:h-[25rem]">
 				<img
 					src="/images/people-grid.png"
-					class="aspect-[3/1] h-full -translate-x-24 object-contain md:translate-x-0"
+					class="aspect-[4/1] h-full w-fit -translate-x-0 object-contain md:-translate-x-16"
 					alt="freelancers" />
 			</div>
 
-			<div class="">
+			<div class="lg:-ml-10">
 				<h3
 					class="mt-6 flex items-center justify-center gap-6 text-xl font-medium text-white md:flex-col md:items-start md:justify-start md:text-left">
 					<div

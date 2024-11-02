@@ -24,7 +24,7 @@
 	</section>
 
 	<section
-		class="mx-auto mt-14 w-full max-w-6xl bg-gradient-to-t from-[#00B7CC] via-[#1B7E89] to-[#00173A] px-5 py-8 text-center md:flex md:gap-10 md:bg-gradient-to-l md:px-16 md:py-20 md:text-left">
+		class="mx-auto mt-14 w-full max-w-[75rem] bg-gradient-to-t from-[#00B7CC] via-[#1B7E89] to-[#00173A] px-5 py-8 text-center md:flex md:gap-10 md:bg-gradient-to-l md:px-16 md:py-20 md:text-left lg:ml-5">
 		<div class="">
 			<h3
 				class="flex items-center justify-center gap-6 text-xl font-medium text-white md:flex-col md:items-start md:justify-start md:text-left">
@@ -103,6 +103,11 @@
 		</div>
 
 		<div class="relative h-[710px] overflow-hidden bg-white/10 p-5 py-16 md:px-10">
+			<img
+				src="/images/skills.png"
+				class="absolute bottom-0 left-1/2 h-80 w-fit -translate-x-1/2 object-cover lg:h-96 lg:w-full lg:object-contain"
+				alt="" />
+
 			<h3
 				class="flex items-center justify-center gap-6 text-xl font-medium text-white md:flex-col md:items-start md:justify-start md:text-left">
 				<div
@@ -118,11 +123,6 @@
 				range of skills to meet any project need. Whether you're looking for technical expertise,
 				creative solutions, or business support, you'll find the right talent here.
 			</p>
-
-			<img
-				src="/images/skills.png"
-				class="absolute bottom-0 left-1/2 h-80 -translate-x-1/2 object-contain lg:h-96 lg:w-full"
-				alt="" />
 		</div>
 	</section>
 	<a href="/" class="mx-auto mt-6 flex w-fit items-center gap-2 text-center">

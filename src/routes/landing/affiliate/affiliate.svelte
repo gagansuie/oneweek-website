@@ -15,10 +15,7 @@
 		</p>
 
 		<div class="relative mx-auto mt-20 aspect-square w-64 bg-white/10 p-2">
-			<img
-				class="h-full w-full object-cover"
-				src="https://plus.unsplash.com/premium_photo-1678197937465-bdbc4ed95815?q=80"
-				alt="a freelancer" />
+			<img class="h-full w-full object-cover" src="/images/affiliate.png" alt="a freelancer" />
 
 			<div class="absolute -bottom-8 -right-8">
 				<IconMedal />
