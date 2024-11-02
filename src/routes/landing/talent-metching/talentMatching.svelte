@@ -2,10 +2,10 @@
 	import IconTool from '$lib/assets/icons/IconTool.svelte'
 </script>
 
-<div class="mx-auto py-20 font-urban">
-	<section class="">
+<div class="py-20 font-urban">
+	<section class="mx-auto px-5 md:max-w-3xl lg:max-w-7xl">
 		<h2
-			class="mx-auto flex w-11/12 flex-wrap items-center justify-center gap-2 text-balance text-center font-urban text-4xl font-semibold leading-normal text-white max-md:flex-col md:text-5xl">
+			class="mx-auto flex flex-wrap items-center justify-center gap-2 text-balance text-center font-urban text-4xl font-semibold leading-normal text-white max-md:w-11/12 max-md:flex-col md:text-5xl">
 			Hire More with AI Talent-Matching
 		</h2>
 
@@ -16,7 +16,7 @@
 		</p>
 
 		<div
-			class="mx-2 mt-10 grid grid-cols-1 bg-gradient-to-b from-[#00B7CC] to-[#00173A] px-5 py-12 md:mx-auto md:mt-14 md:max-w-3xl md:grid-cols-[3fr_2fr] md:gap-2 md:py-16 lg:w-11/12 lg:max-w-7xl">
+			class="mx-2 mt-10 grid grid-cols-1 bg-gradient-to-b from-[#00B7CC] to-[#00173A] px-5 py-12 md:mx-auto md:mt-14 md:grid-cols-[3fr_2fr] md:gap-2 md:py-16 lg:w-11/12">
 			<div class="h-72 md:h-[16rem] lg:h-[25rem]">
 				<img
 					src="/images/people-grid.png"

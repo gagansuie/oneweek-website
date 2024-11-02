@@ -1,7 +1,9 @@
 <script>
 	import IconArrow from '$lib/assets/icons/IconArrow.svelte'
 	import IconArrows from '$lib/assets/icons/IconArrows.svelte'
+	import IconBulb from '$lib/assets/icons/IconBulb.svelte'
 	import IconFee from '$lib/assets/icons/IconFee.svelte'
+	import IconJobTiles from '$lib/assets/icons/IconJobTiles.svelte'
 	import IconLightning from '$lib/assets/icons/IconLightning.svelte'
 	import IconMarketplace from '$lib/assets/icons/IconMarketplace.svelte'
 	import IconProcessor from '$lib/assets/icons/IconProcessor.svelte'
@@ -9,7 +11,7 @@
 	import IconTrust from '$lib/assets/icons/IconTrust.svelte'
 </script>
 
-<div class="mx-auto max-w-7xl pt-20 font-urban">
+<div class="mx-auto mt-32 max-w-7xl font-urban md:px-5">
 	<section class="">
 		<h2
 			class="flex flex-wrap items-center justify-center gap-2 text-center font-urban text-4xl font-semibold leading-normal text-white max-md:flex-col md:text-5xl">
@@ -24,7 +26,7 @@
 	</section>
 
 	<section
-		class="mx-auto mt-14 w-full max-w-[75rem] bg-gradient-to-t from-[#00B7CC] via-[#1B7E89] to-[#00173A] px-5 py-8 text-center md:flex md:gap-10 md:bg-gradient-to-l md:px-16 md:py-20 md:text-left lg:ml-5">
+		class="mx-auto mt-14 w-full max-w-7xl bg-gradient-to-t from-[#00B7CC] via-[#1B7E89] to-[#00173A] px-5 py-8 text-center md:flex md:gap-10 md:bg-gradient-to-l md:px-16 md:py-20 md:text-left">
 		<div class="">
 			<h3
 				class="flex items-center justify-center gap-6 text-xl font-medium text-white md:flex-col md:items-start md:justify-start md:text-left">
@@ -35,11 +37,11 @@
 				Find Top Talent Today
 			</h3>
 
-			<p class="mt-5 w-96 text-base text-white/80 max-md:mx-auto">
+			<p class="mt-5 max-w-96 text-base text-white/80 max-md:mx-auto">
 				It doesn't matter whether you're hiring for a single project or building a remote team.
 				OneWeek always has you covered.
 			</p>
-			<p class="w-96 text-white/80 max-md:mx-auto md:mt-4">
+			<p class="max-w-96 text-white/80 max-md:mx-auto md:mt-4">
 				No “connects” or contract initiation fees - just easy, transparent hiring and working.
 			</p>
 
@@ -47,11 +49,9 @@
 				Start Exploring</button>
 		</div>
 
-		<div class="mt-6 flex gap-4 overflow-x-visible py-4">
-			<div class="flex w-fit items-center gap-4 md:gap-8">
-				{#each new Array(10) as _}
-					<div class="h-96 w-80 bg-white"></div>
-				{/each}
+		<div class="mt-6 flex max-w-sm gap-4 overflow-x-visible py-4 lg:max-w-md">
+			<div class="w-fit">
+				<IconJobTiles />
 			</div>
 		</div>
 	</section>
@@ -112,7 +112,7 @@
 				class="flex items-center justify-center gap-6 text-xl font-medium text-white md:flex-col md:items-start md:justify-start md:text-left">
 				<div
 					class="bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0.1)_100%);] p-5">
-					<IconLightning />
+					<IconBulb />
 				</div>
 				Vast Skills Set Range
 			</h3>
