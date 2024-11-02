@@ -1,12 +1,19 @@
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-	theme: {},
+	theme: {
+		extend: {
+			fontFamily: {
+				urban: ['Urbanist', 'sans-serif'],
+				sans: ['Roboto', 'sans-serif']
+			}
+		}
+	},
 	daisyui: {
 		themes: [
 			{
 				black: {
 					...require('daisyui/src/theming/themes')['black'],
-					primary: '#38bdf8'
+					primary: '#00B7CC'
 				}
 			}
 		]
