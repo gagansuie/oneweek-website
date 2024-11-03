@@ -25,10 +25,6 @@
 	})
 </script>
 
-<svelte:head>
-	<link rel="stylesheet" href="/fonts/montserrat.css" />
-</svelte:head>
-
 <Toolbar />
 <main class="w-screen overflow-hidden">
 	<slot />
