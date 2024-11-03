@@ -26,17 +26,17 @@
 		<div class="dropdown dropdown-end ml-auto md:hidden">
 			<div tabindex="0" role="button" class="btn btn-ghost"><IconHamburger /></div>
 			<ul class="menu dropdown-content z-[1] w-40 gap-2 bg-base-200 p-1 text-base-content shadow">
-				<li><a href="/">Hire Talent</a></li>
-				<li><a href="/">Find Work</a></li>
-				<li><a href="/">FAQ</a></li>
-				<li><a href="/">Log in</a></li>
+				<li><a href="/login">Hire Talent</a></li>
+				<li><a href="/login">Find Work</a></li>
+				<li><a href="/landing#faq-section">FAQ</a></li>
+				<li><a href="/login">Log in</a></li>
 			</ul>
 		</div>
 
 		<ul class="navbar-center hidden gap-12 md:flex">
-			<li class="text-primary"><a href="/"> Hire Talent</a></li>
-			<li><a href="/"> Find Work</a></li>
-			<li><a href="/"> FAQ</a></li>
+			<li class="text-primary"><a href="/login"> Hire Talent</a></li>
+			<li><a href="/login"> Find Work</a></li>
+			<li><a href="/landing#faq-section"> FAQ</a></li>
 		</ul>
 
 		<div class="navbar-end max-md:hidden">

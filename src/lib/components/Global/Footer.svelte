@@ -23,7 +23,7 @@
 		</aside>
 		<nav>
 			<h6 class="mb-4 font-medium">Socials</h6>
-			<a href="https://github.com/CodeCrowCorp" class="link">Github</a>
+			<a href="https://github.com/CodeCrowCorp" class="link">GitHub</a>
 			<a href="https://twitter.com/gagansuie" class="link">Twitter</a>
 			<a href="https://twitch.tv/gagansuie" class="link">Twitch</a>
 			<a href="https://youtube.com/@gagansuie" class="link">YouTube</a>
@@ -32,9 +32,9 @@
 		<nav>
 			<h6 class="mb-4 font-medium">Company</h6>
 			<a href="/" class="link">About </a>
-			<a href="/" class="link">Careers</a>
-			<a href="/" class="link">Contact us</a>
-			<a href="/" class="link">Legal</a>
+			<a href="https://codecrow.io/careers" class="link">Careers</a>
+			<a href="https://codecrow.io/contact" class="link">Contact us</a>
+			<a href="https://codecrow.io/legal" class="link">Legal</a>
 		</nav>
 	</div>
 	<div class="mt-14 text-xs font-medium md:hidden">
