@@ -26,7 +26,7 @@
 		{
 			question: 'What does the Premium service offer?',
 			answer:
-				'Our AI-powered talent-matching system will match you with the best freelancers for your project.'
+				'Our premium service offers an AI-powered talent-matching service that will match you with the best freelancers for your project.'
 		},
 		{
 			question: 'What is the Affiliate program?',

@@ -2,14 +2,28 @@
 	import IconDashedLine from '$lib/assets/icons/IconDashedLine.svelte'
 
 	let selectedState = $state(1)
-
-	$effect(() => {
-		const interval = setInterval(() => {
-			selectedState = selectedState === 4 ? 1 : selectedState + 1
-		}, 3000)
-
-		return () => clearInterval(interval)
-	})
+	const items = [
+		{
+			title: 'Post your project or find a job',
+			details:
+				"Posting your project on OneWeek is quick and easy. Simply provide a brief description of what you need, select your categories, and set your budget. In just minutes, your project will be visible to a wide range of talented freelancers, ready to bring your vision to life. Whether it's a short-term task or a long-term project, OneWeek makes it simple to connect with the right professionals and get started immediately."
+		},
+		{
+			title: 'Get matched with talent',
+			details:
+				'Browse through a diverse pool of talented freelancers. Use filters to narrow down your search based on skills, experience, and ratings. Connect with freelancers who match your project requirements and start collaborating.'
+		},
+		{
+			title: 'Collaborate and complete the job',
+			details:
+				'Keep track of your projects with our intuitive dashboard. Communicate with freelancers, review their work, and make payments securely through our platform. Managing your projects has never been easier.'
+		},
+		{
+			title: 'Pay and earn securely',
+			details:
+				'OneWeek offers secure payment options for both freelancers and clients. Freelancers can rest assured that they will be paid for their work, while clients can trust that their payments are protected until the job is completed.'
+		}
+	]
 </script>
 
 <div class="mx-auto max-w-7xl py-20 font-urban">
@@ -27,89 +41,40 @@
 		<div class="mx-auto mt-12 grid max-w-2xl grid-cols-2 gap-5 max-md:w-11/12">
 			<div class="">
 				<ul class="space-y-2">
-					<li class="text-right {selectedState !== 1 && 'text-white/60'}">
-						<button
-							class="mx-auto flex w-full items-center justify-end gap-5 max-md:w-10/12"
-							onclick={() => (selectedState = 1)}>
-							Post your project or find a job
-
-							<div
-								class="grid h-12 w-12 flex-shrink-0 place-items-center rounded-full border duration-100 {selectedState ===
-								1
-									? 'border-white/40 bg-white/20'
-									: 'border-white/10 bg-transparent text-white/60'}">
-								1
-							</div>
-						</button>
-					</li>
-
-					<li class="flex justify-end pr-[22px]">
-						<IconDashedLine />
-					</li>
-
-					<li class="text-right {selectedState !== 2 && 'text-white/60'}">
-						<button
-							class="mx-auto flex w-full items-center justify-end gap-5 max-md:w-10/12"
-							onclick={() => (selectedState = 2)}>
-							Get matched with talent
-
-							<div
-								class="grid h-12 w-12 flex-shrink-0 place-items-center rounded-full border duration-100 {selectedState ===
-								2
-									? 'border-white/40 bg-white/20'
-									: 'border-white/10 bg-transparent text-white/60'}">
-								2
-							</div>
-						</button>
-					</li>
-
-					<li class="flex justify-end pr-[22px]">
-						<IconDashedLine />
-					</li>
-
-					<li class="text-right {selectedState !== 3 && 'text-white/60'}">
-						<button
-							class="mx-auto flex w-full items-center justify-end gap-5 max-md:w-10/12"
-							onclick={() => (selectedState = 3)}>
-							Collaborate & complete the job
-							<div
-								class="grid h-12 w-12 flex-shrink-0 place-items-center rounded-full border duration-100 {selectedState ===
-								3
-									? 'border-white/40 bg-white/20'
-									: 'border-white/10 bg-transparent text-white/60'}">
-								3
-							</div>
-						</button>
-					</li>
-
-					<li class="flex justify-end pr-[22px]">
-						<IconDashedLine />
-					</li>
-
-					<li class="text-right text-primary {selectedState !== 4 && 'text-primary/60'}">
-						<button
-							class="mx-auto flex w-full items-center justify-end gap-5 max-md:w-10/12"
-							onclick={() => (selectedState = 4)}>
-							Pay and earn securely
-							<div
-								class="grid h-12 w-12 flex-shrink-0 place-items-center rounded-full border text-white duration-100 {selectedState ===
-								4
-									? 'border-white/40 bg-white/20'
-									: 'border-white/10 bg-transparent text-white/60'}">
-								4
-							</div>
-						</button>
-					</li>
+					{#each items as item, index}
+						<li
+							class="text-right {index === 3
+								? selectedState !== index + 1
+									? 'text-success/60'
+									: 'text-success'
+								: selectedState !== index + 1
+									? 'text-white/60'
+									: ''}">
+							<button
+								class="mx-auto flex w-full items-center justify-end gap-5 max-md:w-10/12"
+								onclick={() => (selectedState = index + 1)}>
+								{item.title}
+								<div
+									class="grid h-12 w-12 flex-shrink-0 place-items-center rounded-full border duration-100 {selectedState ===
+									index + 1
+										? 'border-white/40 bg-white/20'
+										: 'border-white/10 bg-transparent text-white/60'}">
+									{index + 1}
+								</div>
+							</button>
+						</li>
+						{#if index < items.length - 1}
+							<li class="flex justify-end pr-[22px]">
+								<IconDashedLine />
+							</li>
+						{/if}
+					{/each}
 				</ul>
 			</div>
 			<div class="bg-primary px-5 py-5 text-black md:px-7">
-				<h3 class="text-lg font-medium">Post Your Project</h3>
+				<h3 class="text-lg font-medium">{items[selectedState - 1].title}</h3>
 				<p class="mt-4 text-xs leading-relaxed md:text-[15px]">
-					Posting your project on One Week is quick and easy. Simply provide a brief description of
-					what you need, set your budget, and choose the skills you're looking for. In just minutes,
-					your project will be visible to a wide range of talented freelancers, ready to bring your
-					vision to life. Whether it's a short-term task or a long-term project, One Week makes it
-					simple to connect with the right professionals and get started immediately
+					{items[selectedState - 1].details}
 				</p>
 			</div>
 		</div>
