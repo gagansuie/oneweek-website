@@ -23,10 +23,10 @@
 					<div class="mr-auto place-self-center lg:col-span-7">
 						<h1
 							class="mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl text-white">
-							A better freelance platform
+							A better work-marketplace
 						</h1>
 						<p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl text-gray-400">
-							4% job completion fee. You keep the rest. <br />No contract initiation fees. No
+							4% job-completion fee. You keep the rest. <br />No contract initiation fees. No
 							connect fees. No service fee tiers.
 						</p>
 						<form

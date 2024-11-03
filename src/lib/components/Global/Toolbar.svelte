@@ -10,8 +10,7 @@
 </script>
 
 <div class="md:px-4 md:pt-4">
-	<div
-		class="navbar drawer drawer-end font-urban border border-[#141414] max-w-3xl px-2 pr-5 mx-auto">
+	<div class="navbar mx-auto max-w-3xl border border-[#141414] px-2 pr-5 font-urban">
 		<div class="navbar-start">
 			<a
 				class="btn btn-ghost text-xl"
@@ -24,29 +23,20 @@
 			</a>
 		</div>
 
-		<input id="my-drawer" type="checkbox" class="drawer-toggle" />
-		<div class="drawer-content md:hidden navbar-end">
-			<label for="my-drawer" class="btn btn-ghost drawer-button"> <IconHamburger /></label>
-		</div>
-
-		<div class="drawer-side">
-			<label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-
-			<ul class="menu bg-base-200 text-base-content gap-2 min-h-full w-60 p-4 py-8">
-				<!-- <label for="my-drawer" aria-label="close sidebar" class="btn w-fit btn-ghost drawer-button">
-					<IconCross />
-				</label> -->
-				<li><a href="/">Hire Talent</a></li>
-				<li><a href="/">Find Work</a></li>
-				<li><a href="/">FAQ</a></li>
-				<li><a href="/">Log in</a></li>
+		<div class="dropdown dropdown-end ml-auto md:hidden">
+			<div tabindex="0" role="button" class="btn btn-ghost"><IconHamburger /></div>
+			<ul class="menu dropdown-content z-[1] w-40 gap-2 bg-base-200 p-1 text-base-content shadow">
+				<li><a href="/login">Hire Talent</a></li>
+				<li><a href="/login">Find Work</a></li>
+				<li><a href="/landing#faq-section">FAQ</a></li>
+				<li><a href="/login">Log in</a></li>
 			</ul>
 		</div>
 
-		<ul class="navbar-center hidden md:flex gap-12">
-			<li class="text-primary"><a href="/"> Hire Talent</a></li>
-			<li><a href="/"> Find Work</a></li>
-			<li><a href="/"> FAQ</a></li>
+		<ul class="navbar-center hidden gap-12 md:flex">
+			<li class="text-primary"><a href="/login"> Hire Talent</a></li>
+			<li><a href="/login"> Find Work</a></li>
+			<li><a href="/landing#faq-section"> FAQ</a></li>
 		</ul>
 
 		<div class="navbar-end max-md:hidden">
@@ -61,13 +51,13 @@
 						</div>
 					{/if}
 					<div class="dropdown dropdown-end">
-						<div tabindex="0" role="button" class="btn btn-ghost btn-square avatar">
+						<div tabindex="0" role="button" class="avatar btn btn-square btn-ghost">
 							<div class="w-10 rounded-md">
 								<img alt="user avatar" src={$page.data.user.user?.avatar} />
 							</div>
 						</div>
 						<ul
-							class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+							class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow">
 							{#if env.PUBLIC_FEATURE_WAITLIST === 'false'}
 								<li><a href="/settings">Settings</a></li>
 							{/if}
@@ -81,7 +71,7 @@
 					</div>
 				</div>
 			{:else}
-				<a class="btn btn-primary py-2 h-fit min-h-0" href="/login">Login</a>
+				<a class="btn btn-primary h-fit min-h-0 py-2" href="/login">Login</a>
 			{/if}
 		</div>
 	</div>
