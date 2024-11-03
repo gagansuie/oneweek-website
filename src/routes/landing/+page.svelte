@@ -12,6 +12,7 @@
 	import Collaborate from './collaborate/collaborate.svelte'
 	import Faq from './faq/faq.svelte'
 	import SimpleHiring from './simple-hiring/simpleHiring.svelte'
+	import StarLines from './StarLines.svelte'
 	import TalentMatching from './talent-metching/talentMatching.svelte'
 
 	let { data } = $props()
@@ -22,6 +23,8 @@
 <div class="pb-10 font-urban">
 	<section class="mx-auto mt-20 grid max-w-6xl place-items-center px-4">
 		<div class="text-center">
+			<StarLines />
+
 			<h1
 				class="text-balance text-4xl font-medium leading-tight text-gray-100 sm:text-5xl md:text-6xl md:font-semibold md:leading-snug">
 				<span class="block">Your Gateway to</span>
