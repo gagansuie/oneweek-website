@@ -18,7 +18,7 @@
 			</div>
 
 			<div class="mt-14 text-xs font-medium max-md:hidden">
-				One Week © 2024 <span class="ml-4 text-white/50">v0.0.1 [beta]</span>
+				Code Crow © 2024 <span class="ml-4 text-white/50">v{__VERSION__} [beta]</span>
 			</div>
 		</aside>
 		<nav>
@@ -38,7 +38,7 @@
 		</nav>
 	</div>
 	<div class="mt-14 text-xs font-medium md:hidden">
-		One Week © 2024 <span class="ml-4 text-white/50">v{__VERSION__} [beta]</span>
+		Code Crow © 2024 <span class="ml-4 text-white/50">v{__VERSION__} [beta]</span>
 	</div>
 </footer>
 

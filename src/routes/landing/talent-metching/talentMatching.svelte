@@ -16,11 +16,11 @@
 		</p>
 
 		<div
-			class="mx-2 mt-10 grid grid-cols-1 bg-gradient-to-b from-[#00B7CC] to-[#00173A] px-5 py-12 md:mx-auto md:mt-14 md:grid-cols-[3fr_2fr] md:gap-2 md:py-16 lg:w-11/12">
+			class="mx-2 mt-10 grid grid-cols-1 bg-gradient-to-b from-[#00B7CC] to-[#00173A] px-5 py-12 md:mx-auto md:mt-14 md:grid-cols-[3fr_2fr] md:gap-2 md:py-16">
 			<div class="h-72 md:h-[16rem] lg:h-[25rem]">
 				<img
 					src="/images/people-grid.png"
-					class="aspect-[4/1] h-full w-fit -translate-x-0 object-contain md:-translate-x-16"
+					class="aspect-[4/1] h-full w-fit -translate-x-0 object-contain md:-translate-x-[7rem]"
 					alt="freelancers" />
 			</div>
 
