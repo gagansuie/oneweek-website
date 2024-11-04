@@ -5,11 +5,11 @@ import * as Sentry from '@sentry/browser'
 const onError = init(env.PUBLIC_SENTRY_DSN || '', {
 	sentryOptions: {
 		// tunnel: '/tunnel',
-		integrations: [
-			Sentry.browserTracingIntegration(),
-			// Sentry.browserProfilingIntegration(),
-			Sentry.replayIntegration()
-		],
+		// integrations: [
+		// 	Sentry.browserTracingIntegration(),
+		// Sentry.browserProfilingIntegration(),
+		// Sentry.replayIntegration()
+		// ],
 		tracesSampleRate: 1.0,
 		profilesSampleRate: 1.0,
 		// we only care about errors
