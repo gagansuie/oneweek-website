@@ -65,25 +65,27 @@ export const handle = onHandle(async ({ event, resolve }) => {
 	}
 
 	if (Authenticate({ pathname, user_role: role || 'user' })) {
-		if (env.PUBLIC_FEATURE_WAITLIST === 'true' && pathname !== '/landing') {
-			redirect(302, '/landing')
-		} else {
-			if (env.PUBLIC_MAINTENANCE_MODE === 'true') {
-				if (pathname === '/maintenance') {
-					return await resolve(event)
-				} else {
-					redirect(302, '/maintenance')
-				}
+		if (env.PUBLIC_MAINTENANCE_MODE === 'true') {
+			if (pathname === '/maintenance') {
+				return await resolve(event)
 			} else {
-				if (
-					pathname === '/maintenance' ||
-					(pathname === '/login' && userId) ||
-					(pathname === '/dashboard' && !userId)
-				) {
-					redirect(302, '/')
-				} else {
-					return await resolve(event)
-				}
+				redirect(302, '/maintenance')
+			}
+		} else if (env.PUBLIC_FEATURE_WAITLIST === 'true') {
+			if (pathname === '/landing') {
+				return await resolve(event)
+			} else {
+				redirect(302, '/landing')
+			}
+		} else {
+			if (
+				pathname === '/maintenance' ||
+				(pathname === '/login' && userId) ||
+				(pathname === '/dashboard' && !userId)
+			) {
+				redirect(302, '/')
+			} else {
+				return await resolve(event)
 			}
 		}
 	} else {
