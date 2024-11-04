@@ -92,7 +92,7 @@
 							<span class="font-semibold text-primary">
 								{getNumberInThousands(value?.clientCount) || 'Error'}
 							</span>
-							Client
+							Clients
 						</span>
 					</div>
 					<div class="h-6 w-px bg-[#D3D1D1]"></div>
