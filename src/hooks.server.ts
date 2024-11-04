@@ -23,7 +23,6 @@ export const handle = onHandle(async ({ event, resolve }) => {
 	let token = event.url.searchParams.get('token') || event.cookies.get('token') || ''
 	let user: any = event.locals.user?.user || ''
 	const role = getWritableVal(user_role)
-	const maintenanceMode: boolean = env.PUBLIC_MAINTENANCE_MODE === 'true'
 
 	if (token && userId) {
 		if (!user) {
@@ -67,9 +66,9 @@ export const handle = onHandle(async ({ event, resolve }) => {
 
 	if (Authenticate({ pathname, user_role: role || 'user' })) {
 		if (env.PUBLIC_FEATURE_WAITLIST === 'true' && pathname !== '/landing') {
-			redirect(302, '/landing')
+			redirect(302, '/')
 		} else {
-			if (maintenanceMode) {
+			if (env.PUBLIC_MAINTENANCE_MODE === 'true') {
 				if (pathname === '/maintenance') {
 					return await resolve(event)
 				} else {
