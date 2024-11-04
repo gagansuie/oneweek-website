@@ -84,6 +84,7 @@
 			</div>
 
 			{#await data.lazy?.waitlistCount then value}
+				<p>{JSON.stringify(value)}</p>
 				<div
 					class="flex items-center justify-center gap-4 font-sans text-xs max-md:mt-4 md:ml-auto md:text-sm">
 					<div class="flex items-center gap-2">
@@ -106,6 +107,8 @@
 						</span>
 					</div>
 				</div>
+			{:catch error}
+				<p>Error loading waitlist count: {error.message}</p>
 			{/await}
 		</form>
 		<div class="mt-5">
