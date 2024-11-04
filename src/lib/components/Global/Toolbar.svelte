@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores'
+	import { env } from '$env/dynamic/public'
 	import IconHamburger from '$lib/assets/icons/IconHamburger.svelte'
 	import IconLogo from '$lib/assets/icons/IconLogo.svelte'
 	import IconSearch from '$lib/assets/icons/IconSearch.svelte'
@@ -57,7 +58,8 @@
 					</div>
 				</div>
 			{:else}
-				<a class="btn btn-primary h-fit min-h-0 py-2" href="/login">Login</a>
+				<a class="btn btn-primary h-fit min-h-0 py-2" href="/login"
+					>{env.PUBLIC_FEATURE_WAITLIST === 'true' ? 'Coming soon' : 'Log in'}</a>
 			{/if}
 		</div>
 	</div>
