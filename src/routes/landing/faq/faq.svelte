@@ -16,7 +16,7 @@
 		},
 		{
 			question: 'Can I switch between being a client and a freelancer?',
-			answer: 'Yes. You can switch between being a client and a freelancer anytime'
+			answer: 'Yes. You can switch between being a client and a freelancer anytime.'
 		},
 		{
 			question: 'When do freelancers get paid?',

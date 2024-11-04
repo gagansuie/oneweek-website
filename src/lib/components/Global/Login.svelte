@@ -5,22 +5,26 @@
 	import { getHref } from '$lib/utils'
 	import IconSocialApple from '$lib/assets/icons/social/IconSocialApple.svelte'
 
+	let isGitHubHovered = $state(false)
 	let isAppleHovered = $state(false)
 </script>
 
-<div class="modal-box relative bg-base-200">
-	<div class="py-4 space-y-5 px-4 md:px-10">
+<div class="modal-box relative bg-base-100">
+	<div class="space-y-5 px-4 py-4 md:px-10">
+		<h2 class="text-3xl">Log in to your account</h2>
 		{#if env.PUBLIC_CROSS_ORIGIN === 'false'}
 			<a
-				class="btn w-full bg-black hover:bg-gray-800 text-white gap-4 border-none hover:text-white"
-				href="{env.PUBLIC_API_URL}/auth/github">
-				<IconSocialGitHubInverse />
+				class="btn btn-outline w-full gap-4"
+				href="{env.PUBLIC_API_URL}/auth/github"
+				onmouseenter={() => (isGitHubHovered = true)}
+				onmouseleave={() => (isGitHubHovered = false)}>
+				<IconSocialGitHubInverse {isGitHubHovered} />
 				Log in with GitHub</a>
-			<a class="btn w-full btn-outline gap-4" href="{env.PUBLIC_API_URL}/auth/google">
+			<a class="btn btn-outline w-full gap-4" href="{env.PUBLIC_API_URL}/auth/google">
 				<IconSocialGoogle />
 				Log in with Google</a>
 			<a
-				class="btn w-full btn-outline gap-4"
+				class="btn btn-outline w-full gap-4"
 				href="{env.PUBLIC_API_URL}/auth/apple"
 				onmouseenter={() => (isAppleHovered = true)}
 				onmouseleave={() => (isAppleHovered = false)}>
@@ -28,17 +32,19 @@
 				Log in with Apple</a>
 		{:else}
 			<button
-				class="btn w-full bg-black hover:bg-gray-800 text-white gap-4 btn-outline hover:text-white"
+				class="btn btn-outline w-full gap-4"
+				onmouseenter={() => (isGitHubHovered = true)}
+				onmouseleave={() => (isGitHubHovered = false)}
 				onclick={async () =>
 					await getHref({
 						provider: 'github',
 						apiUrl: env.PUBLIC_API_URL,
 						xApiKey: env.PUBLIC_X_API_KEY
 					})}>
-				<IconSocialGitHubInverse />
+				<IconSocialGitHubInverse {isGitHubHovered} />
 				Log in with GitHub</button>
 			<button
-				class="btn w-full btn-outline gap-4"
+				class="btn btn-outline w-full gap-4"
 				onclick={async () =>
 					await getHref({
 						provider: 'google',
@@ -48,7 +54,7 @@
 				<IconSocialGoogle />
 				Log in with Google</button>
 			<button
-				class="btn w-full btn-outline gap-4"
+				class="btn btn-outline w-full gap-4"
 				onmouseenter={() => (isAppleHovered = true)}
 				onmouseleave={() => (isAppleHovered = false)}
 				onclick={async () =>
