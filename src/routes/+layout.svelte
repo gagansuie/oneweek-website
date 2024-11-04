@@ -1,6 +1,8 @@
 <script lang="ts">
 	import '$lib/assets/styles/tailwind-output.css'
 	import Toolbar from '$lib/components/Global/Toolbar.svelte'
+	import loginBackground from '$lib/assets/images/login_background.png'
+	import { page } from '$app/stores'
 
 	// @ts-ignore
 	import NProgress from 'nprogress'
@@ -25,10 +27,16 @@
 	})
 </script>
 
-<Toolbar />
-<main class="w-screen overflow-hidden">
-	<slot />
-</main>
+<div
+	class="h-screen items-center justify-center"
+	style={$page.url.pathname === '/login'
+		? `background-image: url(${loginBackground}); background-size: cover; background-position: center;`
+		: ''}>
+	<Toolbar />
+	<main class="w-screen overflow-hidden">
+		<slot />
+	</main>
+</div>
 
 <style>
 </style>

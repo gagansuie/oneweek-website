@@ -7,7 +7,7 @@
 </script>
 
 <div class="md:px-4 md:pt-4">
-	<div class="navbar mx-auto max-w-3xl border border-[#141414] px-2 pr-5 font-urban">
+	<div class="navbar mx-auto max-w-3xl border border-[#141414] bg-base-100 px-2 pr-5 font-urban">
 		<div class="navbar-start">
 			<a class="btn btn-ghost text-xl" href={$page.data.user?.userId ? '/dashboard' : '/landing'}
 				><IconLogo /> <span class="font-medium">OneWeek</span>
