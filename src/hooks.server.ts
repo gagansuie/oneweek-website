@@ -66,7 +66,7 @@ export const handle = onHandle(async ({ event, resolve }) => {
 	}
 
 	if (Authenticate({ pathname, user_role: role || 'user' })) {
-		if (env.PUBLIC_FEATURE_WAITLIST === 'true') {
+		if (env.PUBLIC_FEATURE_WAITLIST === 'true' && pathname !== '/landing') {
 			redirect(302, '/')
 		} else {
 			if (maintenanceMode) {

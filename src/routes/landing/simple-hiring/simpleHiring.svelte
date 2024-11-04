@@ -64,9 +64,7 @@
 							</button>
 						</li>
 						{#if index < items.length - 1}
-							<li class="flex justify-end pr-[22px]">
-								<IconDashedLine />
-							</li>
+							<li class="flex justify-end pr-[38px] md:pr-[22px]"><IconDashedLine /></li>
 						{/if}
 					{/each}
 				</ul>

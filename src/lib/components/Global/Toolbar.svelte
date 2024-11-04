@@ -1,24 +1,14 @@
 <script>
 	import { page } from '$app/stores'
-	import { env } from '$env/dynamic/public'
-	import IconCross from '$lib/assets/icons/IconCross.svelte'
-	import IconDownChevron from '$lib/assets/icons/IconDownChevron.svelte'
 	import IconHamburger from '$lib/assets/icons/IconHamburger.svelte'
 	import IconLogo from '$lib/assets/icons/IconLogo.svelte'
-	import IconMenu from '$lib/assets/icons/IconMenu.svelte'
 	import IconSearch from '$lib/assets/icons/IconSearch.svelte'
 </script>
 
 <div class="md:px-4 md:pt-4">
 	<div class="navbar mx-auto max-w-3xl border border-[#141414] px-2 pr-5 font-urban">
 		<div class="navbar-start">
-			<a
-				class="btn btn-ghost text-xl"
-				href={env.PUBLIC_FEATURE_WAITLIST === 'true'
-					? '/waitlist'
-					: $page.data.user?.userId
-						? '/dashboard'
-						: '/landing'}
+			<a class="btn btn-ghost text-xl" href={$page.data.user?.userId ? '/dashboard' : '/landing'}
 				><IconLogo /> <span class="font-medium">OneWeek</span>
 			</a>
 		</div>
@@ -42,14 +32,12 @@
 		<div class="navbar-end max-md:hidden">
 			{#if $page.data.user?.userId}
 				<div class="flex-none gap-2">
-					{#if env.PUBLIC_FEATURE_WAITLIST === 'false'}
-						<div class="form-control">
-							<label class="input input-bordered flex items-center gap-2">
-								<input type="text" placeholder="Search" class="w-24 md:w-auto" />
-								<IconSearch />
-							</label>
-						</div>
-					{/if}
+					<div class="form-control">
+						<label class="input input-bordered flex items-center gap-2">
+							<input type="text" placeholder="Search" class="w-24 md:w-auto" />
+							<IconSearch />
+						</label>
+					</div>
 					<div class="dropdown dropdown-end">
 						<div tabindex="0" role="button" class="avatar btn btn-square btn-ghost">
 							<div class="w-10 rounded-md">
@@ -58,9 +46,7 @@
 						</div>
 						<ul
 							class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow">
-							{#if env.PUBLIC_FEATURE_WAITLIST === 'false'}
-								<li><a href="/settings">Settings</a></li>
-							{/if}
+							<li><a href="/settings">Settings</a></li>
 							<li><a href="https://codecrow.io/legal" target="_blank">Legal</a></li>
 							<form action="/logout" method="POST">
 								<li>
