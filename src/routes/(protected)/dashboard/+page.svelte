@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { page } from '$app/stores'
 	import Footer from '$lib/components/Global/Footer.svelte'
 </script>
 
