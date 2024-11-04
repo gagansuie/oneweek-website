@@ -1,5 +1,5 @@
 import { redirect } from '@sveltejs/kit'
-import type { LayoutServerLoad } from './$types'
+import type { PageServerLoad } from './$types'
 
 export const load = (({ locals }: { locals: any }) => {
 	if (!locals.user) {
@@ -7,4 +7,4 @@ export const load = (({ locals }: { locals: any }) => {
 	} else {
 		throw redirect(307, '/dashboard')
 	}
-}) satisfies LayoutServerLoad
+}) satisfies PageServerLoad
