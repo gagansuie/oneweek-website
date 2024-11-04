@@ -11,6 +11,8 @@
 	// NProgress Loading bar
 	import '$lib/assets/styles/nprogress.css'
 
+	let { children } = $props();
+
 	NProgress.configure({
 		minimum: 0.75,
 		showSpinner: false,
@@ -32,9 +34,8 @@
 	style={$page.url.pathname === '/login'
 		? `background-image: url(${loginBackground}); background-size: cover; background-position: center;`
 		: ''}>
-	<Toolbar />
 	<main class="w-screen overflow-hidden">
-		<slot />
+		{@render children()}
 	</main>
 </div>
 

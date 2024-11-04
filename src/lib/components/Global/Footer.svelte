@@ -7,9 +7,11 @@
 <footer class="mb-10 border-y border-white/10 p-10 py-14 text-base-content">
 	<div class="footer mx-auto max-w-5xl justify-between">
 		<aside class="font-urban text-white">
-			<div class="flex items-center gap-3 text-xl font-semibold">
-				<IconLogo /> OneWeek
-			</div>
+			<a href="/">
+				<div class="flex items-center gap-3 text-xl font-semibold">
+					<IconLogo /> OneWeek
+				</div>
+			</a>
 
 			<div class="mt-4 flex items-center gap-4">
 				<IconAppStore />

@@ -1,12 +1,12 @@
 import { get, put } from '$lib/api'
 import { type Actions } from '@sveltejs/kit'
-import type { PageServerLoad } from '../$types'
+import type { PageServerLoad } from '../../$types'
 import { isValidEmail } from '$lib/utils'
 
 export const load = (() => {
 	return {
 		lazy: {
-			messages: get(`messages`)
+			waitlistCount: get(`waitlist/count`)
 		}
 	}
 }) satisfies PageServerLoad
