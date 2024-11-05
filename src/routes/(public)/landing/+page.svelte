@@ -22,7 +22,7 @@
 
 <div class="pb-10 font-urban">
 	<section class="mx-auto mt-20 grid max-w-6xl place-items-center px-4">
-		<div class="text-center">
+		<div class="-z-10 text-center">
 			<StarLines />
 
 			<h1
