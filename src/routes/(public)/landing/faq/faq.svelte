@@ -24,11 +24,6 @@
 				'At the end of the week, all freelancers get paid for the work they have completed. The payment is processed through Stripe Connect.'
 		},
 		{
-			question: 'What does the Premium service offer?',
-			answer:
-				'Our premium service offers an AI-powered talent-matching service that will match you with the best freelancers for your project.'
-		},
-		{
 			question: 'What is the Affiliate program?',
 			answer:
 				'Bring your contract from another platform and spend/earn at least $10,000 to earn an Affiliate badge (which provides higher rank in jobs and bids, and the lowest fees on future services).'

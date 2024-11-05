@@ -11,7 +11,7 @@
 
 		<p class="mx-auto mt-4 max-w-6xl text-balance text-center text-white/60 md:mt-6 md:text-lg">
 			Looking to build a versatile team for your project? OneWeek offers access to a wide range of
-			professionals, ready to help you succeed. Our AI talent-matching is available for premium
+			professionals, ready to help you succeed. Our AI-powered talent-matching is available to all
 			users.
 		</p>
 
