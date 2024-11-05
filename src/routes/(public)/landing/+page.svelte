@@ -51,7 +51,7 @@
 			<div class="flex items-center gap-2">
 				<select
 					name="workType"
-					class="select max-w-xs border-none bg-transparent font-sans text-white focus:outline-none md:text-base"
+					class="select max-w-xs border-none bg-[#191919] font-sans text-white focus:outline-none md:text-base"
 					required
 					bind:value={waitlistWorkType}>
 					<option value={1}>Freelancer</option>
